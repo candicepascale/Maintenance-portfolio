@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/espace-membre.css">
+    <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" >
+      <script src="js/defautText.js" defer></script>
+    <title>jewelrybypc</title>
+
+    <style>
+        
+
+        *{
+        padding: 0;
+        margin: 0;
+        }
+        .aide-surgissante {
+        position: absolute;
+        top: 0;
+         left: 0;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: blue;
+        color: white;
+        padding: 3px;
+        line-height: 24px;
+        display: none;
+        }
+
+    .tooltip {
+        --balloon-color: red;
+        --balloon-font-size: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>JEWELRY BY PC</h1>
+    <!--menu de navigation-->
+    <!-- nav>ul>li*4>a -->
+    <!-- ajout partie imbriquée -->
+    <!-- li>a+ul>li*2>a -->
+<header>
+    
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </span>
+        
+        <ul class = "menu" id="js-menu">
+        
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house-chimney"></i>Accueil
+                </a>
+            </li>
+            <li>
+                <a href="categorie.html">
+                    <i class="fa-solid fa-shapes"></i>Catégories</a>
+                <ul>
+                    <li><a href="femme.html"><i class="fa-solid fa-person-dress"></i>Femmes</a></li>
+                    <li><a href="homme.html"><i class="fa-solid fa-person"></i>Hommes</a></li>
+                    <li><a href="enfant.html"><i class="fa-solid fa-children"></i>Enfants</a></li>
+                </ul>            
+            </li>
+        
+        
+            <li><a href="mission.html"><i class="fa-solid fa-pen"></i>Mission</a></li>
+            <li><a href="espace-membre.html"><i class="fa-solid fa-user"></i>Espace Membre</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+            <li><a href="faq.html"><i class="fa-solid fa-exclamation"></i>FAQ</a></li>
+        </ul>
+    </nav>
+</header> 
+<script src="js/script.js"  defer></script>
+    <a href="images/headers.jpg"  target="_blank" rel="noopener no-referrer"><img src="images/headers.jpg" alt="header" class="header" title="une image de bijoux"/></a>
+    
+    <h2> Espace Membre</h2> 
+
+    <div class="container">
+        <form action="espace-membre.html" method="post">
+            <fieldset>
+                <legend> </legend>
+                <div class= "input-container">
+                    <div class="aide-surgissante" id="aide-pseudonyme"></div>
+                
+                    <label
+                        id="label-pseudonyme"
+                        class="tooltip"
+                        data-balloon-lenght="small"
+                        data-balloon-pos="left"
+                        aria-label="Veuillez entrer une adresse email comme Pseudonyme" for="email"> Pseudonyme: </label>
+                    <input type="email" name="email" id="email" class="email">
+                  
+                </div>
+
+                <div class= "input-container">
+
+                    <div class="aide-surgissante" id="aide-password"></div>
+
+                    <label 
+                        id="label-password"
+                        class="tooltip" 
+                        data-balloon-lenght="small"
+                        data-balloon-pos="up" 
+                        aria-label="veuillez saisir votre mot de passe" 
+                        for="password">Mot de passe: </label>
+                    <input type="password"
+                    name="password"
+                    id="password"
+                    class="password" placeholder="Entrer un mot de passe">
+                   
+                </div>
+
+               
+
+
+                <div class= "input-container">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class=" container"></div>
+    <footer>
+        <div class="copyright">Copyright &copy;<span id="annee"></span> Candice Talla.  Tous droits reservés
+        </div>
+        
+         <ul class="social-icons">
+             <li>
+               <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+             </li>
+             <li>
+               <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+             </li>
+             <li>
+               <a href="www.github.com"><i class="fa-brands fa-github"></i></a>
+             </li>
+             <li>
+               <a href="www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+             </li>
+             <li><a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+             </li>
+           
+           </ul>
+    </footer>
+    <script src="js/general.js" defer></script>
+</body>
+</html>

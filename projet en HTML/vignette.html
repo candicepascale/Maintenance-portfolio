@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  >
+    <title>Vignette-détail des bijoux</title>
+    <script src="js/bijou.js" defer></script>
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/vignette.css">
+    
+
+    <style>
+       
+        body {
+            background-color: pink;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .vignette-bijou {
+            background-color: white;
+            height: 205px;
+            width: 205px;
+            border: 1px black solid;
+            border-radius: 100px;
+            margin-right: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .vignette-bijou:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        .vignette-bijou img {
+            height: 200px;
+        }
+
+        #zone-affichage {
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            width: 700px;
+            height: 500px;
+            margin: 0 auto 5px ;
+            margin-top: 10px;
+            border: solid 3px #333333;
+            border-radius: 10px;
+        }
+
+        .detail-bijou {
+            display: none;
+            width: 700px;
+            height: 500px;
+            border: solid 1px black;
+        }
+
+        .bijou-nom {
+            font-size: 30px;
+
+        }
+
+        .bijou-description {
+            width: 300px;
+        }
+
+        .bijou-images {
+            width: 300px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </span>
+            
+            <ul class = "menu" id="js-menu">
+            
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house-chimney"></i>Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="categorie.html">
+                        <i class="fa-solid fa-shapes"></i>Catégories</a>
+                    <ul>
+                        <li><a href="femme.html"><i class="fa-solid fa-person-dress"></i>Femmes</a></li>
+                        <li><a href="homme.html"><i class="fa-solid fa-person"></i>Hommes</a></li>
+                        <li><a href="enfant.html"><i class="fa-solid fa-children"></i>Enfants</a></li>
+                    </ul>            
+                </li>
+            
+            
+                <li><a href="mission.html"><i class="fa-solid fa-pen"></i>Mission</a></li>
+                <li><a href="espace-membre.html"><i class="fa-solid fa-user"></i>Espace Membre</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+                <li><a href="faq.html"><i class="fa-solid fa-exclamation"></i>FAQ</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <script src="js/script.js"  defer></script>
+    <a href="images/headers.jpg"  target="_blank" rel="noopener no-referrer"><img src="images/headers.jpg" alt="header" class="header" title="une image de bijoux"></a>
+    <h2> Galeries</h2> 
+
+    <div class="flex-container">
+        <div class="vignette-bijou" id="montre">
+            <img src="images/min/im1.jpg" alt=""/>
+        </div>
+        <div class="vignette-bijou" id="chaine">
+            <img src="images/min/im6.jpg" alt="" />
+        </div>
+        <div class="vignette-bijou" id="gourmette">
+            <img src="images/min/im5.jpg" alt="" />
+        </div>
+        <div class="vignette-bijou" id="bracelet">
+            <img src="images/min/bijo.jpg" alt=""/>
+        </div>
+        <div class="vignette-bijou" id="bague" >
+            <img src="images/min/im1vjpg.jpg" alt=""/>
+        </div>
+    </div>
+
+
+
+    <div id="zone-affichage">
+
+
+
+    </div>
+
+
+
+
+    <div class="detail-bijou" id="detail-montre">
+        <h4 class="bijou-nom">Montre</h4>
+
+        <img class="bijou-images" src="images/im1.jpg" alt=""/>
+
+        <div class="bijou-description">
+            <h5>Montre de marque Swarovski</h5>
+            <p>La marque de cette montre est une marque très luxueuse</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae consectetur repellendus veritatis odit sint eius eaque alias quae qui voluptatem maiores molestias dolorum, vel dolor molestiae animi, mollitia deserunt!</p>
+
+
+            <a href="https://fr.wikipedia.org/wiki/Swarovski">Voir la fiche wikipedia sur Swarovski</a>
+
+        </div>
+
+    </div>
+    <div class="detail-bijou" id="detail-chaine">
+        <h4 class="bijou-nom">Chaine</h4>
+
+        <img class="bijou-images" src="images/im6.jpg" alt="" />
+
+        <div class="bijou-description">
+            <h5>Chaine personalisée </h5>
+            <p>Cette chaine est en argent massif</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae consectetur repellendus veritatis odit sint eius eaque alias quae qui voluptatem maiores molestias dolorum, vel dolor molestiae animi, mollitia deserunt!</p>
+
+            <a href="https://www.oreakids.fr/243/que-symbolise-un-bracelet-chaine-personnalise/#:~:text=Un%20bracelet%20chaine%20personnalis%C3%A9%20peut%20symboliser%20l%27amour%2C%20l%27amiti%C3%A9,montrer%20%C3%A0%20quelqu%27un%20%C3%A0%20quel%20point%20vous%20l%27aimer.">Voir la fiche sur les bijoux personnalisées</a>
+
+        </div>
+
+    </div>
+    <div class="detail-bijou" id="detail-gourmette">
+        <h4 class="bijou-nom">Gourmette</h4>
+
+        <img class="bijou-images" src="images/im5.jpg" alt="" />
+
+        <div class="bijou-description">
+            <h5>Gourmette homme</h5>
+            <p>Cette gourmette en acier inoxydable. C'est un incontournable</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae consectetur repellendus veritatis odit sint eius eaque alias quae qui voluptatem maiores molestias dolorum, vel dolor molestiae animi, mollitia deserunt!</p>
+
+            <a href="https://fr.wikipedia.org/wiki/Gourmette">voir info sur les gourmettes </a>
+
+        </div>
+
+    </div>
+    <div class="detail-bijou" id="detail-bracelet">
+        <h4 class="bijou-nom">Bracelet</h4>
+
+        <img class="bijou-images" src="images/bijo.jpg" alt=""/>
+
+        <div class="bijou-description">
+            <h5>Bracelet bi-matière</h5>
+            <p>Un incontounable pour la femme </p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae consectetur repellendus veritatis odit sint eius eaque alias quae qui voluptatem maiores molestias dolorum, vel dolor molestiae animi, mollitia deserunt!</p>
+
+            <a href="https://fr.wikipedia.org/wiki/Bracelet">Voir la fiche bracelet</a>
+
+        </div>
+
+    </div>
+    <div class="detail-bijou" id="detail-bague">
+        <h4 class="bijou-nom">Bague</h4>
+
+        <img class="bijou-images" src="images/im1vjpg.jpg" alt="" />
+
+        <div class="bijou-description">
+            <h5>Bague en or et diamant</h5>
+            <p>Une bague à laquelle personne ne résiste.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae consectetur repellendus veritatis odit sint eius eaque alias quae qui voluptatem maiores molestias dolorum, vel dolor molestiae animi, mollitia deserunt!</p>
+
+
+            <a href="https://fr.wikipedia.org/wiki/Bague">Voir la fiche d'info sur les bagues</a>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="copyright">
+           Copyright &copy;<span id="annee"></span> Candice Talla.  Tous droits reservés
+        </div>
+        
+         <ul class="social-icons">
+             <li>
+               <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+             </li>
+             <li>
+               <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+             </li>
+             <li>
+               <a href="www.github.com"><i class="fa-brands fa-github"></i></a>
+             </li>
+             <li>
+               <a href="www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+             </li>
+             <li><a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+             </li>
+           
+           </ul>
+       </footer>
+       <script src="js/general.js" defer></script>
+</body>
+
+</html>

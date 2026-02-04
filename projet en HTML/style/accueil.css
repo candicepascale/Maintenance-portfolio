@@ -1,0 +1,283 @@
+@import url("general.css");
+body{
+    background-color: pink;
+}
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    
+}
+
+/*.container{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: burlywood;
+    opacity: 0.2;
+    padding: 40px;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    text-align: justify;
+    margin-bottom: 100px;
+}*/
+
+h1{
+    text-align: center;
+}
+
+
+.images{
+    /*margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;*/
+    display: flex;
+    /*display: block;*/
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    
+}
+
+
+.evenement{
+    /*margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;*/
+    display: flex;
+    /*display: block;*/
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    
+}
+
+.objet{
+    background-color: lightcoral;
+    /*float: left;*/
+   /* width: 30%;*/
+   flex-basis: 30%;
+   flex-grow: 1;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    height: 10%;
+    box-shadow: 0 0 10px 20px lightgray; 
+    font-size: 0.8em;
+
+}
+
+h3{
+    font-size: 2em;
+    text-align: center;
+    padding: 2%;
+}
+
+#even,
+#even0{
+    float: left;
+    border-radius: 58%;
+    width: 136px;
+    height: 136px;
+    margin: 0 30px 20px  0px;
+    shape-outside: circle();
+}
+
+.input-container{
+    text-align: center;
+    padding: 1em;
+    
+}
+
+input[type="email"]{
+    width: 95%;
+    height: 30px;
+    border: 10px;
+    color: azure ;
+    background-color: black;
+    border-radius: 15px;
+}
+
+input[type="email"]:hover{
+    background-color: cyan;
+    color: black;    
+}
+input[type="email"]:focus{
+    outline: none;    
+}
+
+.email{
+    padding-left: 20px;
+    background-position: 5px;
+}
+
+
+input[type="submit"]{
+    padding: 12px;
+    border-radius: 50px;
+    color: azure;
+    background-color:black ;
+    border: 10px;
+}
+input[type="submit"]:hover{
+    background-color: cyan;
+    color: black;
+   
+}
+
+
+
+#decompte{
+    margin: 10% 20px 0 0;
+    text-align: center;
+    padding: 10px;  
+    font-size: 300%;
+    width: 100%;
+    background-color:black;
+    border-radius: 2px;
+    color: aquamarine;
+    box-shadow: 0 0 0 10px whitesmoke;
+}
+
+article {
+    
+    background-color: lightpink;
+    border-radius: 2%;
+    
+}
+
+
+section > p {
+    margin-left: 10rem;
+    font-weight: normal;
+    margin-bottom: 12px;
+    color: beige;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+.conteneur-carrousel {
+    width: 900px;
+    height: 600px;
+    margin: 100px auto 0;
+    position: relative;
+  }
+  /*conteneur pour toutes les images*/
+  .conteneur-images {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .conteneur-images img {
+    width: 100%;
+    /*Pour que les images s'adaptent à la taille du conteneur*/
+    height: auto;
+    /* Pour que les images s'empilent*/
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* conteneur des boutons */
+  .commandes {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  
+  .commandes button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /* transformer en cercle*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .commandes img {
+    width: 15px;
+    position: relative;
+  }
+  /* pour placer le bouton à gauche */
+  .commandes button:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+  }
+  /* pour placer le bouton à droite */
+  .commandes button:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+  }
+  /* pour décaler l'image à l'intérieur des boutons */
+  .commandes button:nth-child(1) img {
+    left: -1px;
+  }
+  .commandes button:nth-child(2) img {
+    right: -1px;
+  }
+  
+  .cercles {
+    position: absolute;
+    /* pour faire dépasser les cercles en bas du carrousel */
+    top: 105%;
+    left: 50%;
+    /* centrer les cercles sur l'axe x */
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cercle {
+    width: 20px;
+    height: 20%;
+    border-radius: 50%;
+    /* Mettre un espace entre les cercles */
+    margin: 5px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #333;
+  }
+  
+  /* couleur du cercle actif */
+  .actif-cercle {
+    background: cyan;
+  }
+  /* pour faire apparaître le bouton actif */
+  .actif {
+    opacity: 1 !important;
+  }
+
+  .picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    background-color: #f5f5f5;
+    text-decoration: none;
+    width: 50%;
+    padding: 10px 22px;
+    border: none;
+    font-size: 3em; 
+    color: pink;
+   /* text-align: center;*/
+    border-radius:10px ;
+    /*align-self: self-end;*/
+    margin: 3% auto 0 auto;
+   
+}
+
+.picture:hover{
+    color: whitesmoke;
+    background-color: lightgray;
+}

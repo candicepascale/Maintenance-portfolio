@@ -1,0 +1,58 @@
+@import url("general.css");
+
+body {
+    background: rgba(255, 192, 203, 0.403);
+    background: linear-gradient(
+      to right,
+      rgba(37, 95, 196, 0.404),
+      rgba(196, 37, 93, 0.2)
+    );
+  }
+  
+  .accordeonConteneur {
+    padding: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 10%;
+  }
+  .accordeonItem {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .accordeonItemHeader {
+    cursor: pointer;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+    background:pink;
+    color: black;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .fermer .accordeonItemContenu {
+    height: 0px;
+    transform: scaleY(0);
+  }
+  .ouvert .accordeonItemContenu {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    transform: scaleY(1);
+    transform-origin: top;
+    box-sizing: border-box;
+  }
+  .ouvert .accordeonItemHeader {
+    margin: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: cyan;
+    color: black;
+  }

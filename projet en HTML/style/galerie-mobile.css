@@ -1,0 +1,64 @@
+@import url("general.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(207, 93, 154, 0.403);
+    background: linear-gradient(to right,
+            rgba(151, 177, 223, 0.404),
+            rgba(196, 37, 162, 0.2));
+}
+
+.conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.photos {
+    background: #fff;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    max-width: 30%;
+    overflow: hidden;
+}
+
+.photos img {
+    border: 3px solid #000;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease;
+}
+
+.photos img:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+.photos .texte {
+    font-size: 1.5em;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+/*style pour les ecrans tactiles*/
+@media screen and (min-width:768px) and (min-width:1024px) {
+    .photos {
+        max-width: 40%;
+    }
+
+}
+
+/*style pour les cellulaires*/
+@media screen and (min-width:320px) and (min-width:767px) {
+    .photos {
+        max-width: 100%;
+    }
+
+}

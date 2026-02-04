@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/*menu principal*/
+nav{
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul{
+    /*pour enlever les puces*/
+    list-style-type: none;
+    display: flex;
+    /*flex-wrap: nowrap;*/
+}
+
+nav li{
+    /*float: left;
+    width: 20%;*/
+    flex-grow: 1;
+    position: relative;
+    background-color: lightpink;
+    text-align: center;
+}
+
+/*nav li{
+    background-color: pink;
+}*/
+
+nav li a{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: black;
+    font-weight: bolder;
+    border-bottom: 4px solid cyan;
+}
+
+nav li a:hover{
+    color: black;
+    background-color: cyan;
+}
+
+nav li a.actif{
+    color: blue;
+    background-color: goldenrod;
+}
+
+nav li a.actif:hover{
+    color: black;
+    background-color: lightgrey;
+}
+
+
+/*menu deroulant*/
+nav ul li ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+/*menu apparait au survol*/
+
+
+nav ul li:hover ul {
+    /*display: block;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*nav ul li:hover ul li{
+    float: none;
+    width: 100%;
+}
+*/
+.icon{
+    color: aquamarine;
+    font-size: 1.5em;
+    
+}
+
+.header{
+    width: 100%;
+    
+
+}
+
+h1{
+    text-align: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+h2{
+    text-align: center;
+   
+
+}
+
+
+
+.header1{
+    width: 10%;
+    border-radius: 16%;
+
+}
+
+.header2{
+    width: 20%;
+
+
+}
+.header3{
+    width: 20%;
+
+}
+
+.header4{
+    width: 20%;
+
+}
+
+.header5{
+    width: 20%;
+
+}
+
+.header6{
+    width: 20%;
+}
+
+
+.header7{
+    width: 20%;
+
+}
+
+.header8{
+    width: 20%;
+
+}
+
+
+.header9{
+    width: 20%;
+
+}
+
+
+.header0{
+    width: 20%;
+
+}
+
+.header01{
+    width: 24%;
+
+}
+.header02{
+    width: 25%;
+
+}
+.header03{
+    width: 33%;
+}
+.header00{
+    width: 19%;
+
+} 
+.container{
+    height: 90vh;
+}  
+
+footer{
+    display: flex;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-grow: 1;*/
+    /*position: fixed;
+    /*bottom: 0;*/
+}
+
+.copyright{
+    /*position: left;
+    top: 50px;
+    left: 50px;*/
+    align-self: center;
+    font-size: 1.5em;
+    font-weight: bold; 
+ 
+}
+
+.social-icons{
+    text-align: right;
+    display: flex;
+}
+
+.social-icons li{
+    position: relative;
+    right: 10px;
+    /*display: flex;*/
+    /*display: inline-block;*/
+    flex-direction: column;
+    font-size: 10px;
+    list-style-type: none; 
+    margin: 0px 10px 10px 0px;/*haut,gauche,bas,droite*/
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.social-icons li a{
+    padding: 16px;
+    color: beige;
+    display: block;
+}
+
+.social-icons li:hover{
+    transform:translateY(-8px) scale(1.2);
+    box-shadow: 0px 10px 10px rosybrown ;
+}
+
+.social-icons li:nth-child(1){
+  background: #1877F2;
+
+}
+
+.social-icons li:nth-child(2){
+    background: #E4405F;
+  
+  }
+  
+  .social-icons li:nth-child(3){
+    background: #283344;
+  
+  }  
+
+  .social-icons li:nth-child(4){
+    background: #25D366;
+  
+  }
+
+  .social-icons li:nth-child(5){
+    background: #1DA1F2;
+  
+  }
+
+
+
+  .menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu a{
+    display: flex;
+    justify-content: center;
+}
+
+/*menu hamburger*/
+.navbar-toggle{
+    /*display:none;*/
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff;
+    position: absolute;
+    top: 0.25em;
+    margin-left:2vh ;
+    z-index: 200;
+}
+
+/* icone hamburger*/
+.bar1, .bar2, .bar3{
+    background-color: #fff;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+    
+}
+
+.change .bar1{
+    transform: rotate(-360deg) translate(-9px, 6px);
+}
+
+.change .bar2{
+    transform: rotate(360deg) translate(-9px, 10px);
+}
+
+.change .bar3{
+    transform: rotate(90deg) translate(-9px, 6px);
+}
+
+
+/* tablette*/@media screen and (min-width:320px) and (max-width:768px) {
+    .navbar-toggle{
+        .menu{
+            justify-content: space-between;
+        }
+    }
+}
+
+/*cellulaire*/
+@media screen and (min-width:320px) and (max-width:768px) {
+    .navbar-toggle{
+        display: block;
+    }
+    /*cacher le menu*/
+    .menu {
+        display: none;
+    }
+
+    /*barre de menu*/
+    .navbar{
+        display: block;
+        position: relative;
+        z-index: 200;
+    }
+
+    /* classe utilisée dans le js pour ouvrir le menu hamburger*/
+    .active{
+        display: flex;
+        flex-direction: column;
+    }
+}
